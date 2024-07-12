@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "18adf689-b447-4227-bf52-9d659ce0266c",
+		"name": "Blueprinnt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Aisha\",\n    \"last_name\": \"Aisha\",\n    \"username\": \"aisha\",\n\n    \"email\": \"aisha@mail.com\",\n    \"password\": \"aisha1\",\n\n    \"tel\" : \"+254710800477\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5001/staff/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"staff",
+								"register"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"abudda\",\n    \"password\": \"abudda\",\n    \"pubkey\": \"-----BEGIN PUBLIC KEY-----↵MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA4AYgJ7HmnMy7yqx4xPFO↵yshXFLzUzhqvE1L4e8qRnKII26BVjLrxEFE/yl4YOZq2VVRJ/9XaDhj1aXLLg+Z6↵jdSSiOiKGJwBjTtBqT5COuW8YJu6I9Av7Igtw8thryY47sZQAFx+PwO0t1fuW69D↵0NJlr00jav8FwtXJVKDrxZl4FklSMRcRE02WsXliFO9kG5MWP1SItepXPuooKJty↵gtKAx+HKd5qrS96Cc55Au5+UTScx88XaFKXjFgPEkcu6kpM0SZMi+hUg0/9b9Gfb↵dgYT1oNRiUl4FTrBqoBN9JB4CfqCR6X2mFXe3sfLir3aUYCOSvqyInD2sgDYKbl3↵/utbeKk3IMc1NJrxINpEgcq0GCSm63e8yHZGQZNI5opskIwYEya9WrI7Xj8IbQda↵oyzYhmsPmS8VXudjvpvEczU+30E/neVkz50yF2nx/4YO+RI1xTLMUpqmu3hTyBgZ↵O5094rDqvVC3oldqhatF7QrQ0SJMMptuhcx4nIACJ8U8Asn07xBo/Br8Ggc+8bVg↵iicb5MUiMD0SOvt1/RtteC1inrDMkyfTOwI4gcg8AApp2OaNGU3IrMH9mvGuW0Kr↵xKR/8t0/b5K/nTrcieB0KsScgx8+BWuUaNExsrVUNMAC1+kBazayOIxDKSyIe5y6↵UZ/hQbKb0qS+SHOIgIkwuKMCAwEAAQ==↵-----END PUBLIC KEY-----\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/staff/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"staff",
+								"login"
+							],
+							"query": [
+								{
+									"key": "pubkey",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"kimani@mail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/staff/forgotpassword",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"staff",
+								"forgotpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "recoverparams",
+								"value": "574ffce1c400af988a964a3d9b1cc72defc9ace7e8701d055878b7544618f3be",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"kimani\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/staff/newpassword",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"staff",
+								"newpassword"
+							],
+							"query": [
+								{
+									"key": "recoverparams",
+									"value": "12aa0c9e6ee438a1b94e3acee3f1174a26aae182bacf5523aaacb36e7badb144",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home Page",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/logout",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
