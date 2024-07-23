@@ -39,7 +39,7 @@ class HomePageAPI(MethodView):
         homedict = {}
         homedict ["title"] = "Santana Elevators"
         homedict ["titleshortdesc"] = "We install, upgrade, maintain and provide latest elvator products"
-        homedict ["titlelongdesc"] = "Spannning East Africa currently expandibg regionally into the continent, our global standard is shown in our client diversity and most of all quality of our work"
+        homedict ["titlelongdesc"] = "Spannning East Africa currently expanding regionally into the continent, our global standard is shown in our client diversity and most of all quality of our work"
         homedict ["menu1"] = "Projects"
         homedict ["menu2"] = "Ecommerce"
         homedict ["menu3"] = "Blog"
