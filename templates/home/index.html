@@ -49,15 +49,15 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover:underline" data-nav-link>{{homedict["menu1"]}}</a>
+            <a href="#projects" class="navbar-link hover:underline" data-nav-link>{{homedict["menu1"]}}</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover:underline" data-nav-link>{{homedict["menu2"]}}</a>
+            <a href="#ecommerce" class="navbar-link hover:underline" data-nav-link>{{homedict["menu2"]}}</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover:underline" data-nav-link>{{homedict["menu3"]}}</a>
+            <a href="#blog" class="navbar-link hover:underline" data-nav-link>{{homedict["menu3"]}}</a>
           </li>
 
         </ul>
@@ -152,7 +152,7 @@
         - #FEATURED POST
       -->
 
-      <section class="section featured" aria-label="featured post">
+      <section class="section featured" aria-label="featured post" id="projects">
         <div class="container">
 
           <p class="section-subtitle">
@@ -170,7 +170,7 @@
                   <img src="./static/home/assets/images/{{projectcard['imagename']}}"  width="500" height="600" loading="lazy"
                     alt="{{projectcard["content"][:140]}}" class="img-cover">
 
-                  <ul class="avatar-list absolute">
+                  <!-- <ul class="avatar-list absolute">
 
                     <li class="avatar-item">
                       <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
@@ -186,7 +186,7 @@
                       </a>
                     </li>
 
-                  </ul>
+                  </ul> -->
                 </figure>
 
                 <div class="card-content">
@@ -194,13 +194,13 @@
                   <ul class="card-meta-list">
                       {% for tags in projectcard["cardtaglist"] %}
                     <li>
-                      <a href="#" class="card-tag">{{tags}}</a>
+                      <a href="#projects" class="card-tag">{{tags}}</a>
                     </li>
                     {% endfor %} 
                   </ul>
 
                   <h3 class="h4">
-                    <a href="#" class="card-title hover:underline">
+                    <a href="#projects" class="card-title hover:underline">
                       {{projectcard["title"]}}
                     </a>
                   </h3>
@@ -228,7 +228,7 @@
         - #RECENT POST
       -->
 
-      <section class="section recent" aria-label="recent post">
+      <section class="section recent" aria-label="recent post" id="ecommerce">
         <div class="container">
 
           <div class="title-wrapper">
@@ -240,7 +240,7 @@
             </h2>
 
             <div class="top-author">
-              <ul class="avatar-list">
+              <!-- <ul class="avatar-list">
 
 
              
@@ -275,7 +275,7 @@
                 </li>
                 
 
-              </ul>
+              </ul> -->
 
               <span class="span">{{homedict["ecommercecardsintro"]}}</span>
             </div>
@@ -290,11 +290,11 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
-                  <img src="./static/home/assets/images/recommended-1.jpg"
+                  <img src="./static/home/assets/images/{{ecommercecard['imagename']}}"
                    width="550" height="660" loading="lazy"
                     alt="{{ecommercecard["content"][:140]}}" class="img-cover">
 
-                  <ul class="avatar-list absolute">
+                  <!-- <ul class="avatar-list absolute">
 
                     <li class="avatar-item">
                       <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
@@ -310,7 +310,7 @@
                       </a>
                     </li>
 
-                  </ul>
+                  </ul> -->
                 </figure>
 
                 <div class="card-content">
@@ -319,14 +319,14 @@
 
                 {% for tags in ecommercecard["cardtaglist"] %}
                     <li>
-                      <a href="#" class="card-tag">{{tags}}</a>
+                      <a href="#ecommerce" class="card-tag">{{tags}}</a>
                     </li>
                     {% endfor %}
 
                   </ul>
 
                   <h3 class="h4">
-                    <a href="#" class="card-title hover:underline">
+                    <a href="#ecommerce" class="card-title hover:underline">
                       {{ecommercecard["title"]}} 
                     </a>
                   </h3>
@@ -357,7 +357,7 @@
         - #RECOMMENDED POST
       -->
 
-      <section class="section recommended" aria-label="recommended post">
+      <section class="section recommended" aria-label="recommended post" id="blog">
         <div class="container">
 
           <p class="section-subtitle">
@@ -373,10 +373,10 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
-                  <img src="static/home/assets/images/recommended-1.jpg" width="300" height="360" loading="lazy"
+                  <img src="static/home/assets/images/{{blogs['imagename']}}" width="300" height="360" loading="lazy"
                     alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
 
-                  <ul class="avatar-list absolute">
+                  <!-- <ul class="avatar-list absolute">
 
                     <li class="avatar-item">
                       <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
@@ -392,13 +392,13 @@
                       </a>
                     </li>
 
-                  </ul>
+                  </ul> -->
                 </figure>
 
                 <div class="card-content">
 
                   <h3 class="h5">
-                    <a href="#" class="card-title hover:underline">
+                    <a href="#blog" class="card-title hover:underline">
 
                       {{blogs["title"]}}
                     </a>
