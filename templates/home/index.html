@@ -161,15 +161,13 @@
 
           <ul class="has-scrollbar">
 
-
-
           {% for projectcard in homedict["projectcardslist"] %}
-
+                  
             <li class="scrollbar-item">
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                  <img src="{{ url_for ( 'static',filename='home/assets/images/'+projectcard['imagename'] ) }}  width="500" height="600" loading="lazy"
+                  <img src="./static/home/assets/images/{{projectcard['imagename']}}"  width="500" height="600" loading="lazy"
                     alt="{{projectcard["content"][:140]}}" class="img-cover">
 
                   <ul class="avatar-list absolute">
@@ -292,7 +290,7 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
-                  <img src="./assets/images/recommended-1.jpg"
+                  <img src="./static/home/assets/images/recommended-1.jpg"
                    width="550" height="660" loading="lazy"
                     alt="{{ecommercecard["content"][:140]}}" class="img-cover">
 
