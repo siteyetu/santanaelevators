@@ -38,12 +38,14 @@ def create_app(**config_overrides):
 
     # import blueprints
     from prints.auth.views import auth_app
+    from prints.ecommerce.views import ecommerce_app
     from prints.payments.views import payments_app
     from prints.home.views import home_app
 
 
     # register blueprints    
     app.register_blueprint(auth_app)
+    app.register_blueprint(ecommerce_app)
     app.register_blueprint(payments_app)
     app.register_blueprint(home_app)
 
